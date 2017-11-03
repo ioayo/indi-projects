@@ -1,0 +1,113 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+
+html, body
+	font-size: 16px
+	height: 100%
+
+body
+	min-width: 400px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	padding: calc(2vw + 1vh)
+	font-size: 100%
+	line-height: 1.2
+	color: $maincolor
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.logo
+	display: inline-block
+	max-width: 15rem
+	overflow: hidden
+	opacity: .8
+	.caret
+		display: none
+section
+	max-width: 60rem
+	padding-bottom: 1rem
+	padding-right: 10%
+	position: relative
+	&:after
+		position: absolute
+		content: ''
+		transform: translateX(100%)
+		width: 10rem
+		bottom: 0
+		height: 2px
+		background-color: $maincolor
+	a
+		text-decoration: none
+		position: relative
+		outline: none
+		color: indianred
+		&:visited
+		&:after
+			transition: width .3s
+			content: ''
+			position: absolute
+			left: 0
+			width: 0
+			bottom: 0
+			height: 1px
+			background-color: lighten($maincolor, 50%)
+		&:hover
+			&:after
+				width: 100%
+.footer
+	&:after
+		width: 0
+
+h1
+	font-size: 3rem
+	span
+		white-space: nowrap
+
+h2
+	font-size: 2.4rem
+
+.block 
+	display: inline-block
+
+.img-cdwrs
+	padding: 1rem
+	span
+		color:
+		display: block
+		text-align: left
+		font-size: 0.8rem
+		margin-left: 10px
+	img
+		display: block
+@import "media" // Всегда в конце

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Flash Cards
+body
+    header 
+        h1 Flash Cards
+    section#content 
+        h2= prompt
+        if hint 
+            p
+                i Hint: #{hint}
+        ul 
+            each color in colors
+                li= color
+    footer
+        p An app to help you study
